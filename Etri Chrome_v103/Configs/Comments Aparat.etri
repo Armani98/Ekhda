@@ -1,0 +1,136 @@
+[SETTINGS]
+{
+  "Name": "افزایش کامنت ویدیو های اپارات",
+  "SuggestedBots": 160,
+  "MaxCPM": 0,
+  "LastModified": "2022-04-28T07:38:11.0920426+00:00",
+  "AdditionalInfo": "اگه خواستید با بقیه به اشتراک بزارید منبع فراموش نشه",
+  "RequiredPlugins": [],
+  "Author": "sir meti",
+  "Version": "EtriBullet",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "کامنتی که میخوای بزاره",
+      "VariableName": "commentmilad",
+      "Id": 1008137471
+    },
+    {
+      "Description": "ایدی ویدیو",
+      "VariableName": "videoIDmilad",
+      "Id": 2127472666
+    }
+  ],
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#GET_GUID REQUEST GET "https://www.aparat.com/signin" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#Guid PARSE "<SOURCE>" LR "guid: \"" "\"," -> VAR "G11milad" 
+
+#GET_TEMP REQUEST POST "https://www.aparat.com/api/fa/v1/user/Authenticate/auth?callbackType=postmessage" 
+  CONTENT "{\"guid\":\"<G11milad>\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: www.aparat.com" 
+  HEADER "Origin: https://www.aparat.com" 
+  HEADER "Referer: https://www.aparat.com/signin?callbackType=postmessage" 
+  HEADER "sec-ch-ua: \"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "Sec-Fetch-Dest: empty" 
+  HEADER "Sec-Fetch-Mode: cors" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#TEMPID PARSE "<SOURCE>" LR "\":{\"temp_id\":\"" "\"," -> VAR "TEMPIDmilad" 
+
+#LOGIN1 REQUEST POST "https://www.aparat.com/api/fa/v1/user/Authenticate/signin_step1?callbackType=postmessage" 
+  CONTENT "{\"account\":\"<USER>\",\"temp_id\":\"<TEMPIDmilad>\",\"guid\":\"<G11milad>\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: www.aparat.com" 
+  HEADER "Origin: https://www.aparat.com" 
+  HEADER "Referer: https://www.aparat.com/signin?callbackType=postmessage" 
+  HEADER "sec-ch-ua: \"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "Sec-Fetch-Dest: empty" 
+  HEADER "Sec-Fetch-Mode: cors" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#Tempid2 PARSE "<SOURCE>" LR "temp_id\":\"" "\",\"code" -> VAR "TEMP2Milad" 
+
+#LOGIN2 REQUEST POST "https://www.aparat.com/api/fa/v1/user/Authenticate/signin_step2?callbackType=postmessage" 
+  CONTENT "{\"temp_id\":\"<TEMP2Milad>\",\"account\":\"<USER>\",\"codepass_type\":\"pass\",\"code\":\"<PASS>\",\"guid\":\"<G11milad>\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: www.aparat.com" 
+  HEADER "Origin: https://www.aparat.com" 
+  HEADER "Referer: https://www.aparat.com/signin/password" 
+  HEADER "sec-ch-ua: \"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "Sec-Fetch-Dest: empty" 
+  HEADER "Sec-Fetch-Mode: cors" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#USERNAME PARSE "<SOURCE>" LR "\",\"username\":\"" "\"," -> VAR "USERNAMEE" 
+
+REQUEST GET "https://www.aparat.com/api/fa/v1/video/video/show/videohash/<videoIDmilad>?pr=1&mf=1&referer=direct" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#Videohash PARSE "<SOURCE>" LR "videohash\\/" "\\" -> VAR "MiladVideohash" 
+
+#tty PARSE "<SOURCE>" LR "tty\\/" "\\" -> VAR "Miladtty" 
+
+#hash PARSE "<SOURCE>" LR "comment\\/new\\/videohash\\/<MiladVideohash>\\/tty\\/<Miladtty>\\/hash\\/" "\",\"" -> VAR "Miladhash" 
+
+#کامنت FUNCTION URLEncode "<commentmilad>" -> VAR "commentsirmeti" 
+
+REQUEST POST "https://www.aparat.com/api/fa/v1/video/comment/new/videohash/<MiladVideohash>/tty/<Miladtty>/hash/<Miladhash>?commentbody=<commentsirmeti>" 
+  CONTENT "commentbody=<commentsirmeti>" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: www.aparat.com" 
+  HEADER "isNext: true" 
+  HEADER "jsonType: simple" 
+  HEADER "Origin: https://www.aparat.com" 
+  HEADER "Referer: https://www.aparat.com/v/9r80P" 
+  HEADER "sec-ch-ua: \"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "Sec-Fetch-Dest: empty" 
+  HEADER "Sec-Fetch-Mode: cors" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" 
+

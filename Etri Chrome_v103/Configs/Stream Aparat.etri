@@ -1,0 +1,614 @@
+[SETTINGS]
+{
+  "Name": "استریم اپارات",
+  "SuggestedBots": 2,
+  "MaxCPM": 0,
+  "LastModified": "2021-12-10T22:53:04.0570071+03:00",
+  "AdditionalInfo": "ساخته شده توسط SirMeti",
+  "RequiredPlugins": [],
+  "Author": "SirMeti",
+  "Version": "EtriBullet",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "نام کاربری خودتون رو وارد کنید",
+      "VariableName": "USERNAMEE",
+      "Id": 288472503
+    }
+  ],
+  "ForceHeadless": false,
+  "AlwaysOpen": true,
+  "AlwaysQuit": true,
+  "QuitOnBanRetry": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#باز_کردن_مرورگر BROWSERACTION Open 
+
+#سایت_وارد_شدن_اپارات NAVIGATE "https://www.aparat.com/login" 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#وارد_کردن_یوزر ELEMENTACTION Id "username" 
+  SendKeys "<USER>" 
+
+#وارد_شدن ELEMENTACTION XPath "//*[@id=\"main-container\"]/section/div/div[2]/form/button" 
+  Submit 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#پسورد ELEMENTACTION Id "password" 
+  SendKeys "<PASS>" 
+
+#ادامه ELEMENTACTION XPath "//*[@id=\"main-container\"]/section/div/div[1]/form/button" 
+  Submit 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+BROWSERACTION OpenNewTab 
+
+NAVIGATE "https://www.aparat.com/<USERNAMEE>/live" 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+#صبر ELEMENTACTION Id "" 
+  WaitForElement 
+
+BROWSERACTION Quit 
+

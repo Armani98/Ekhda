@@ -1,0 +1,87 @@
+{
+  "General": {
+    "WaitTime": 100,
+    "RequestTimeout": 10,
+    "MaxHits": 0,
+    "BotsDisplayMode": 1,
+    "EnableBotLog": false,
+    "SaveLastSource": false,
+    "SendToCheckOnAbort": false,
+    "WebhookEnabled": false,
+    "WebhookURL": "",
+    "WebhookUser": "Undefined"
+  },
+  "Proxies": {
+    "ConcurrentUse": false,
+    "NeverBan": false,
+    "BanLoopEvasion": 100,
+    "ShuffleOnStart": false,
+    "Reload": true,
+    "ReloadSource": 0,
+    "ReloadPath": "",
+    "ReloadType": 0,
+    "ReloadInterval": 15,
+    "AlwaysGetClearance": false,
+    "GlobalBanKeys": [],
+    "GlobalRetryKeys": [],
+    "RemoteProxySources": [
+      {
+        "Id": 832940408,
+        "Active": true,
+        "Url": "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&timeout=10000&country=all",
+        "Type": 1,
+        "Pattern": "([0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+:[0-9]+)",
+        "Output": "[1]"
+      },
+      {
+        "Id": 237760590,
+        "Active": true,
+        "Url": "https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all",
+        "Type": 0,
+        "Pattern": "([0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+:[0-9]+)",
+        "Output": "[1]"
+      },
+      {
+        "Id": 1184395470,
+        "Active": true,
+        "Url": "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all",
+        "Type": 3,
+        "Pattern": "([0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+:[0-9]+)",
+        "Output": "[1]"
+      }
+    ]
+  },
+  "Captchas": {
+    "CurrentService": 0,
+    "AntiCapToken": "",
+    "ImageTypToken": "",
+    "DBCUser": "",
+    "DBCPass": "",
+    "TwoCapToken": "",
+    "RuCapToken": "",
+    "DCUser": "",
+    "DCPass": "",
+    "AZCapToken": "",
+    "SCToken": "",
+    "SRUserId": "",
+    "SRToken": "",
+    "TrueCapUser": "",
+    "TrueCapToken": "",
+    "CIOToken": "",
+    "CDToken": "",
+    "CustomTwoCapToken": "",
+    "CustomTwoCapDomain": "example.com",
+    "CustomTwoCapPort": 80,
+    "BypassBalanceCheck": false,
+    "Timeout": 120
+  },
+  "Selenium": {
+    "Browser": 0,
+    "Headless": true,
+    "FirefoxBinaryLocation": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+    "ChromeBinaryLocation": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "ChromeExtensions": [],
+    "DrawMouseMovement": true,
+    "PageLoadTimeout": 60
+  }
+}

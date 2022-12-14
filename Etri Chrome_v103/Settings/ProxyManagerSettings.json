@@ -1,0 +1,14 @@
+{
+  "ProxySiteUrls": [
+    "https://aparat.com",
+    "https://twitch.tv",
+    "https://www.aparat.com/v/oBZQu"
+  ],
+  "ProxyKeys": [
+    "Aparat",
+    "Twitch",
+    "oBZQu"
+  ],
+  "ActiveProxySiteUrl": "https://aparat.com",
+  "ActiveProxyKey": "Aparat"
+}

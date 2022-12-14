@@ -1,0 +1,88 @@
+[SETTINGS]
+{
+  "Name": "Aparat Watch Time 2Min Manual",
+  "SuggestedBots": 4,
+  "MaxCPM": 0,
+  "LastModified": "2022-03-18T01:18:16.2149946+05:30",
+  "AdditionalInfo": "این کانفیگ واسه کسانی که ویدیو به صورت خودکار پلی نمیشه",
+  "RequiredPlugins": [],
+  "Author": "Sir Meti",
+  "Version": "EtriBullet",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "link ro vard kn",
+      "VariableName": "links",
+      "Id": 1560721758
+    }
+  ],
+  "ForceHeadless": false,
+  "AlwaysOpen": true,
+  "AlwaysQuit": true,
+  "QuitOnBanRetry": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+BROWSERACTION Open 
+
+#aparat NAVIGATE "https://www.aparat.com/v/<links>" 50 BanOnTimeout=FALSE 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+#Space BROWSERACTION SendKeys "<SPACE>" 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
+ELEMENTACTION Id "playerContaier" 
+  WaitForElement 
+
